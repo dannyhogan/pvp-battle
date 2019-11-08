@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css?family=Bungee&display=swap');
+
+html, body {
+  padding: 0;
+  margin: 0;
+  height: 100vh;
+  width: 100vw;
+  cursor: crosshair;
+}
+
+#sign-in {
+  font-family: 'Bungee';
+  background: URL('./assets/map.png');
+  padding: 0;
+  margin: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.title {
+  font-size: 3em;
+  color: lightseagreen;
+  text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.466);
+}
+
+#sign-in-form {
+  color:whitesmoke;
+  font-size: 1.5em;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.466);
+  background-color: #303030;
+  border: 2px solid darkturquoise;
+  border-radius: 10px;
+  height: 300px;
+  width: 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.form-label {
+  font-size: .75em;
+  display: flex;
+  align-items: center;
+}
+
+.form-input {
+  margin-left: 10px;
+  border-radius: 5px;
+  outline: none;
+}
+
+#canvas {
+  background: rgb(2, 2, 2);
+}
+
+.form-button {
+  font-family: 'Bungee';
+  width: 100px;
+  height: 50px;
+  margin: 5px;
+}
+
+#chat-container {
+  background: rgb(31, 31, 31);
+  border: 2px solid red;
+  display: flex;
+  flex-direction: column-reverse;
+  width: 20%;
+  min-width: 250px;
+}
+
+#chat-form {
+  width: 100%;
+  display: flex;
+}
+
+#chat-input {
+  margin: 0;
+  background: darkgray;
+  width: 80%;
+  height: 40px;
+}
+
+#chat-button {
+  margin: 0;
+  width: 20%;
+}
+
+#chat-message {
+  color: white;
+  font-family: 'Bungee';
+  height: 20px;
+  background: rgba(255, 255, 255, 0.103);
+  margin: 0 2px;
+}
+
+#chat-user {
+  color: lightblue;
+}
+
+#canvas {
+  background-color: black;
+}
