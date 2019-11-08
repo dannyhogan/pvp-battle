@@ -1,4 +1,7 @@
 # SPACE BATTLE
+## STILL IN BETA! :)
+https://space-battle-io.herokuapp.com/
+
 #### Developed by Danny Hogan - 2019
 
 Tech Used:
