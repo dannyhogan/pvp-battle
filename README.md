@@ -1,5 +1,5 @@
 # SPACE BATTLE
-https://space-battle-io.herokuapp.com/
+https://space-battle-io.herokuapp.com/ (STILL IN BETA!)
 
 #### Developed by Danny Hogan - 2019
 
