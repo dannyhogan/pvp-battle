@@ -1,5 +1,5 @@
-#SPACE BATTLE
-### Developed by Danny Hogan - 2019
+# SPACE BATTLE
+#### Developed by Danny Hogan - 2019
 
 Tech Used:
 -------
