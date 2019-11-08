@@ -1,4 +1,4 @@
-# SPACE-BATTLE.IO
+SPACE BATTLE
 ### Developed by Danny Hogan - 2019
 
 Tech Used:
@@ -24,5 +24,5 @@ Description
 -------
 A space-battle PVP game with realtime chat.
 
-This project was my first time using web sockets, experimenting with a player and entity based objects.
-With a realtime chat room, PVP, scoring, and more to come... SPACE-BATTLE.IO has been a fun project to work on.
+This project was my first time using web sockets, and experimenting with a player and entity based objects.
+With a realtime chat room, PVP, scoring, and more to come... this game has been a fun little project to work on.
