@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="./index.css">
+  <title>space-battle.io</title>
+</head>
+<body>
+
+  <div id="sign-in">
+    <h1 class="title">space-battle.io</h1>
+    <form id="sign-in-form">
+      <h3>Sign In</h1>
+        <label class="form-label">
+          Username:
+          <input requried class="form-input" id="username-input" type="text" onkeyup="this.value = this.value.trim()"
+            maxlength="15">
+        </label>
+        <label class="form-label">
+          Password:
+          <input required class="form-input" id="password-input" type="password"
+            onkeyup="this.value = this.value.trim()" maxlength="20">
+        </label>
+        <div>
+          <button class="form-button" id="sign-in-button">Sign-In</button>
+          <button class="form-button" id="sign-up-button">Sign-Up</button>
+        </div>
+    </form>
+  </div>
+
+  <div id="game-container" style="display: none;">
+    <canvas id="canvas" width="1000" height="650"></canvas>
+    <div id="chat-container">
+      <form id="chat-form">
+        <input id="chat-input"></input>
+        <button type="submit" id="chat-button"></button>
+      </form>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.3.0/socket.io.js"></script>
+  <script type="module" src="./index.js"></script>
+</body>
+
+</html>
