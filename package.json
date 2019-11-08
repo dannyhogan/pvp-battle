@@ -1,24 +1,33 @@
 {
-  "name": "jump-battle",
+  "name": "pvp-battle",
   "version": "1.0.0",
   "description": "",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "start:watch": "nodemon server.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/dannyhogan/jump-battle.git"
+    "url": "git+https://github.com/dannyhogan/pvp-battle.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/dannyhogan/jump-battle/issues"
+    "url": "https://github.com/dannyhogan/pvp-battle/issues"
   },
-  "homepage": "https://github.com/dannyhogan/jump-battle#readme",
+  "homepage": "https://github.com/dannyhogan/pvp-battle#readme",
   "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "dotenv": "^8.2.0",
     "express": "^4.17.1",
+    "mongojs": "^3.1.0",
+    "mongoose": "^5.7.7",
     "socket.io": "^2.3.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.19.4"
   }
 }
