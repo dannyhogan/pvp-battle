@@ -13,7 +13,7 @@ app.get('/', (req, res) => {
   res.sendFile(__dirname + '/client/game.html');
 });
 
-const PORT = process.env.PORT | 2000;
+const PORT = process.env.PORT || 2000;
 server.listen(PORT);
 console.log(`Server started on port ${PORT}.`);
 
