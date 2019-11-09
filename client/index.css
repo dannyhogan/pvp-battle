@@ -1,11 +1,12 @@
 @import url('https://fonts.googleapis.com/css?family=Bungee&display=swap');
 
-html, body {
+body {
   padding: 0;
   margin: 0;
   height: 100vh;
   width: 100vw;
   cursor: crosshair;
+  background: black;
 }
 
 #sign-in {
@@ -23,7 +24,7 @@ html, body {
 
 .title {
   font-size: 3em;
-  color: lightseagreen;
+  color: #39ff14;
   text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.466);
 }
 
@@ -31,8 +32,8 @@ html, body {
   color:whitesmoke;
   font-size: 1.5em;
   box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.466);
-  background-color: #303030;
-  border: 2px solid darkturquoise;
+  background-color: #dddddd23;
+  border: 3px solid #39ff14;
   border-radius: 10px;
   height: 300px;
   width: 500px;
@@ -55,6 +56,7 @@ html, body {
 }
 
 #canvas {
+  border: 4px solid lime;
   background: rgb(2, 2, 2);
 }
 
@@ -67,36 +69,76 @@ html, body {
 
 #chat-container {
   background: rgb(31, 31, 31);
-  border: 2px solid red;
+  border: 4px solid lime;
   display: flex;
-  flex-direction: column-reverse;
+  align-items: center;
+  flex-direction: column;
+  justify-content: flex-end;
   width: 20%;
   min-width: 250px;
+  position: relative;
+  font-family: 'Bungee';
+}
+
+#chat-header {
+  color:white;
+  position: absolute;
+  text-align: center;
+  top: 0;
+  background: rgba(245, 245, 245, 0.212);
+  width: 100%;
+  height: 40px;
 }
 
 #chat-form {
   width: 100%;
   display: flex;
+  flex-wrap: wrap;
 }
 
 #chat-input {
+  color: rgba(255, 255, 255, 0.678);
+  font-size: 1em;
   margin: 0;
-  background: darkgray;
-  width: 80%;
+  background: rgba(169, 169, 169, 0.192);
   height: 40px;
+  width: 100%;
+  text-indent: 10px;
+  outline: none;
+  font-family: 'Bungee';
 }
 
 #chat-button {
+  font-family: 'Bungee';
+  font-size: .75em;
+  color: lime;
+  outline: none;
   margin: 0;
-  width: 20%;
+  height: 40px;
+  width: 100%;
+  background: rgb(32, 32, 32);
+  cursor: pointer;
+}
+
+#chat-list {
+  list-style: none;
+  padding: 0;
+  width: 100%;
+  overflow-y: scroll;
+  max-height: 450px;
 }
 
 #chat-message {
   color: white;
-  font-family: 'Bungee';
-  height: 20px;
-  background: rgba(255, 255, 255, 0.103);
+  background: rgba(255, 255, 255, 0.100);
   margin: 0 2px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#chat-message:nth-child(odd) {
+  background: rgba(255, 255, 255, 0.25);
+
 }
 
 #chat-user {

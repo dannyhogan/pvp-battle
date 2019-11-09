@@ -59,6 +59,7 @@ class Player extends Entity {
     this.hp = 10;
     this.hpMax = 10;
     this.score = 0;
+    this.typing = false;
   };
 
   update(BULLET_LIST, initPack) {
@@ -90,6 +91,11 @@ class Player extends Entity {
       this.spdY = this.maxSpd;
     else
       this.spdY = 0;
+
+    if (this.typing) {
+      this.spdX = 0;
+      this.spdY = 0;
+    }
   }
 
   getInitPack() {
@@ -101,7 +107,8 @@ class Player extends Entity {
       number: this.number,
       hp: this.hp = 10,
       hpMax: this.hpMax = 10,
-      score: this.score
+      score: this.score,
+      typing: this.typing
     }
   }
 
@@ -111,7 +118,8 @@ class Player extends Entity {
       x: this.x,
       y: this.y,
       hp: this.hp,
-      score: this.score
+      score: this.score,
+      typing: this.typing
     }
   }
 }

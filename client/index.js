@@ -2,8 +2,7 @@ const socket = io();
 const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
 const chatForm = document.getElementById('chat-form');
-const chatButton = document.getElementById('chat-button');
-const chatContainer = document.getElementById('chat-container');
+const chatList = document.getElementById('chat-list');
 const chatInput = document.getElementById('chat-input');
 const signInContainer = document.getElementById('sign-in');
 const usernameInput = document.getElementById('username-input');
@@ -55,8 +54,8 @@ socket.on('signUpResponse', data => {
 let selfId = null;
 
 //CANVAS HEIGHT/WIDTH
-let WIDTH = 1000;
-let HEIGHT = 650;
+let WIDTH = 800;
+let HEIGHT = 600;
 
 //ACTIVE PLAYERS AND BULLETS
 const PLAYER_LIST = {};
@@ -178,8 +177,8 @@ document.onmouseup = () => {
 };
 
 document.onmousemove = event => {
-  let x = -500 + event.clientX - 8;
-  let y = -325 + event.clientY - 8;
+  let x = -400 + event.clientX - 8;
+  let y = -330 + event.clientY - 8;
   const angle = Math.atan2(y, x) / Math.PI * 180;
 
   socket.emit('keyPress', { inputId: 'mouseAngle', state: angle })
@@ -187,10 +186,23 @@ document.onmousemove = event => {
 
 // CHAT ACTIONS
 
+chatInput.addEventListener('focus', () => {
+  socket.emit('typing', { state: true })
+});
+
+chatInput.addEventListener('blur', () => {
+  socket.emit('typing', { state: false })
+});
+
 socket.on('addToChat', data => {
-  console.log('fired in addToChat');
   const player = PLAYER_LIST[data.id];
-  chatContainer.innerHTML += `<div id = "chat-message" ><span id="chat-user">${player.username}: </span>${data.message}</div > `;
+
+  const chatMessage = document.createElement('li');
+  chatMessage.id = 'chat-message';
+  chatMessage.textContent = `${player.username} : ${data.message}`;
+
+  chatList.appendChild(chatMessage);
+  chatInput.value = '';
 });
 
 chatForm.onsubmit = event => {

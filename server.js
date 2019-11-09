@@ -90,6 +90,10 @@ const onPlayerConnect = (socket, user) => {
     }
   });
 
+  socket.on('typing', data => {
+    player.typing = data.state;
+  })
+
   socket.emit('init', {
     selfId: socket.id,
     players: initPlayers(),

@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="./index.css">
   <title>space-battle.io</title>
 </head>
+
 <body>
 
   <div id="sign-in">
@@ -16,8 +17,8 @@
       <h3>Sign In</h1>
         <label class="form-label">
           Username:
-          <input requried class="form-input" id="username-input" type="text" onkeyup="this.value = this.value.trim()"
-            maxlength="15">
+          <input required class="form-input" id="username-input" type="text"
+            onkeyup="this.value = this.value.trim()" maxlength="15">
         </label>
         <label class="form-label">
           Password:
@@ -32,13 +33,18 @@
   </div>
 
   <div id="game-container" style="display: none;">
-    <canvas id="canvas" width="1000" height="650"></canvas>
+
+    <canvas id="canvas" width="800" height="600"></canvas>
+
     <div id="chat-container">
-      <form id="chat-form">
-        <input id="chat-input"></input>
-        <button type="submit" id="chat-button"></button>
+      <h2 id="chat-header">Global Chat:</h2>
+      <ul id="chat-list"></ul>
+      <form autocomplete="off" id="chat-form">
+        <input id="chat-input" placeholder="Type a message..."></input>
+        <button type="submit" id="chat-button">Send Message</button>
       </form>
     </div>
+
   </div>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.3.0/socket.io.js"></script>
